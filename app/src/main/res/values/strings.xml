@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Scoop</string>
+    <string name="home">Home</string>
+    <string name="popular">Popular</string>
+    <string name="imdb">IMDB</string>
+    <string name="tmdb">TMDB</string>
+    <string name="see_all">See All</string>
+</resources>
