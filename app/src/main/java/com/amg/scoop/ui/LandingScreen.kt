@@ -9,7 +9,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.tooling.preview.Preview
 import com.amg.scoop.models.ListingContainer
 import com.amg.scoop.models.ListingSection
-import com.amg.scoop.models.MostPopular
+import com.amg.scoop.models.PopularContainer
 import com.amg.scoop.ui.custom.LandingToolBar
 import com.amg.scoop.ui.custom.ListingSection
 import com.amg.scoop.ui.theme.ScoopTheme
@@ -32,7 +32,7 @@ fun LandingScreen(title: String, containers: List<ListingContainer>) {
 private fun LandingList(data: List<ListingContainer>) {
     LazyColumn {
         items(data) { item ->
-            if (item is MostPopular) {
+            if (item is PopularContainer) {
                 ListingSection(
                     section = item,
                     seeAllAction = {}
@@ -49,11 +49,11 @@ private fun PreviewHomeScreen() {
         LandingScreen(
             "Scoop",
             listOf<ListingSection>(
-                MostPopular.default,
-                MostPopular.default,
-                MostPopular.default,
-                MostPopular.default,
-                MostPopular.default,
+                PopularContainer.default,
+                PopularContainer.default,
+                PopularContainer.default,
+                PopularContainer.default,
+                PopularContainer.default,
             )
         )
     }

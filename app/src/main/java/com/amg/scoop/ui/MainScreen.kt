@@ -25,7 +25,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.amg.scoop.R
 import com.amg.scoop.models.ListingSection
-import com.amg.scoop.models.MostPopular
+import com.amg.scoop.models.PopularContainer
 
 sealed class Screen(val route: String, val icon: ImageVector, @StringRes val resourceId: Int) {
     object Home : Screen(route = "home", icon = Icons.Filled.Home, resourceId = R.string.home)
@@ -80,27 +80,27 @@ fun MainScreen() {
                     LandingScreen(
                         "Scoop",
                         listOf<ListingSection>(
-                            MostPopular.default,
-                            MostPopular.default,
-                            MostPopular.default,
-                            MostPopular.default,
-                            MostPopular.default,
+                            PopularContainer.default,
+                            PopularContainer.default,
+                            PopularContainer.default,
+                            PopularContainer.default,
+                            PopularContainer.default,
                         )
                     )
                 }
                 composable(Screen.Popular.route) {
                     ListingScreen(
-                        MostPopular.default
+                        PopularContainer.default
                     )
                 }
                 composable(Screen.IMDB.route) {
                     ListingScreen(
-                        MostPopular.default
+                        PopularContainer.default
                     )
                 }
                 composable(Screen.TMDB.route) {
                     ListingScreen(
-                        MostPopular.default
+                        PopularContainer.default
                     )
                 }
             }

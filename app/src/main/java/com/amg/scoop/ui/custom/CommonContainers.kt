@@ -22,8 +22,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.amg.scoop.R.string
 import com.amg.scoop.models.DataItem
 import com.amg.scoop.models.ListingSection
-import com.amg.scoop.models.MostPopular
 import com.amg.scoop.models.Movie
+import com.amg.scoop.models.PopularContainer
 import com.amg.scoop.ui.listitems.MoviesSectionListItem
 import com.amg.scoop.ui.theme.AppTheme
 import com.amg.scoop.ui.theme.ScoopTheme
@@ -100,7 +100,7 @@ private fun HorizontalList(data: List<DataItem>) {
 private fun PreviewListingSection() {
     ScoopTheme {
         ListingSection(
-            section = MostPopular(
+            section = PopularContainer(
                 title = "Home Home Home Home Home Ho Ho Ho Ho",
                 data = listOf(Movie.default, Movie.default, Movie.default)
             ),

@@ -12,8 +12,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.amg.scoop.models.DataItem
 import com.amg.scoop.models.ListingContainer
-import com.amg.scoop.models.MostPopular
 import com.amg.scoop.models.Movie
+import com.amg.scoop.models.PopularContainer
 import com.amg.scoop.ui.custom.LandingToolBar
 import com.amg.scoop.ui.listitems.MoviesListingListItem
 import com.amg.scoop.ui.theme.AppTheme
@@ -26,7 +26,7 @@ fun ListingScreen(container: ListingContainer) {
         verticalArrangement = Arrangement.Center
     ) {
 
-        if (container is MostPopular) {
+        if (container is PopularContainer) {
 
             LandingToolBar(title = container.title)
 
